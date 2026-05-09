@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* 字体导入 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -43,39 +46,48 @@
 }
 
 :root {
-  --primary: var(--color-blue-700);
-  --primary-foreground: var(--color-blue-50);
-  --sidebar-primary: var(--color-blue-600);
-  --sidebar-primary-foreground: var(--color-blue-50);
-  --chart-1: var(--color-blue-300);
-  --chart-2: var(--color-blue-500);
-  --chart-3: var(--color-blue-600);
-  --chart-4: var(--color-blue-700);
-  --chart-5: var(--color-blue-800);
+  /* 天青色主题 - Ru Ware Celadon Theme */
+  --celadon-primary: #87B0C1;
+  --celadon-secondary: #A8C5D1;
+  --celadon-dark: #6B8FA3;
+  --celadon-light: #D4E5ED;
+  --neutral-dark: #2C3E50;
+  --neutral-light: #F5F3F0;
+  --neutral-gray: #9CA3AF;
+  
+  --primary: #87B0C1;
+  --primary-foreground: #F5F3F0;
+  --sidebar-primary: #6B8FA3;
+  --sidebar-primary-foreground: #F5F3F0;
+  --chart-1: #87B0C1;
+  --chart-2: #A8C5D1;
+  --chart-3: #6B8FA3;
+  --chart-4: #5A7A8F;
+  --chart-5: #4A6A7F;
   --radius: 0.65rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.235 0.015 65);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.235 0.015 65);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.235 0.015 65);
-  --secondary: oklch(0.98 0.001 286.375);
-  --secondary-foreground: oklch(0.4 0.015 65);
-  --muted: oklch(0.967 0.001 286.375);
-  --muted-foreground: oklch(0.552 0.016 285.938);
-  --accent: oklch(0.967 0.001 286.375);
-  --accent-foreground: oklch(0.141 0.005 285.823);
+  --background: oklch(0.98 0.001 286.375);
+  --foreground: #2C3E50;
+  --card: #FFFFFF;
+  --card-foreground: #2C3E50;
+  --popover: #FFFFFF;
+  --popover-foreground: #2C3E50;
+  --secondary: #A8C5D1;
+  --secondary-foreground: #2C3E50;
+  --muted: #E8EEF2;
+  --muted-foreground: #9CA3AF;
+  --accent: #87B0C1;
+  --accent-foreground: #FFFFFF;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
-  --border: oklch(0.92 0.004 286.32);
-  --input: oklch(0.92 0.004 286.32);
-  --ring: oklch(0.623 0.214 259.815);
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.235 0.015 65);
-  --sidebar-accent: oklch(0.967 0.001 286.375);
-  --sidebar-accent-foreground: oklch(0.141 0.005 285.823);
-  --sidebar-border: oklch(0.92 0.004 286.32);
-  --sidebar-ring: oklch(0.623 0.214 259.815);
+  --border: #D4E5ED;
+  --input: #F5F3F0;
+  --ring: #87B0C1;
+  --sidebar: #FFFFFF;
+  --sidebar-foreground: #2C3E50;
+  --sidebar-accent: #87B0C1;
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: #D4E5ED;
+  --sidebar-ring: #87B0C1;
 }
 
 .dark {
@@ -134,19 +146,39 @@
 }
 
 @layer components {
-  /**
-   * Custom container utility that centers content and adds responsive padding.
-   *
-   * This overrides Tailwind's default container behavior to:
-   * - Auto-center content (mx-auto)
-   * - Add responsive horizontal padding
-   * - Set max-width for large screens
-   *
-   * Usage: <div className="container">...</div>
-   *
-   * For custom widths, use max-w-* utilities directly:
-   * <div className="max-w-6xl mx-auto px-4">...</div>
-   */
+  /* 天青色主题自定义样式 */
+  .celadon-gradient {
+    @apply bg-gradient-to-br from-[#87B0C1] via-[#A8C5D1] to-[#D4E5ED];
+  }
+  
+  .celadon-text {
+    @apply text-[#2C3E50] font-serif;
+  }
+  
+  .celadon-heading {
+    @apply font-serif font-bold text-[#2C3E50] tracking-wide;
+  }
+  
+  .celadon-card {
+    @apply bg-white rounded-lg shadow-sm border border-[#D4E5ED] hover:shadow-md transition-shadow duration-300;
+  }
+  
+  .celadon-button {
+    @apply bg-[#87B0C1] text-white hover:bg-[#6B8FA3] transition-colors duration-200 rounded-md px-6 py-2 font-medium;
+  }
+  
+  .celadon-divider {
+    @apply h-px bg-gradient-to-r from-transparent via-[#87B0C1] to-transparent;
+  }
+  
+  /* 开片纹理背景 */
+  .crackle-bg {
+    background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663629083491/5hmdyP2CR2fx6xHnFPhU4N/crackle-texture-D6FWWrETBvpQM4TiSQrdus.webp');
+    background-size: 200px 200px;
+    background-attachment: fixed;
+  }
+  
+  /* 自定义容器 */
   .container {
     width: 100%;
     margin-left: auto;
@@ -173,5 +205,49 @@
       padding-right: 2rem;
       max-width: 1280px; /* Standard content width */
     }
+  }
+}
+
+/* 动画定义 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@layer utilities {
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  .animate-shimmer {
+    animation: shimmer 2s ease-in-out infinite;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
   }
 }
