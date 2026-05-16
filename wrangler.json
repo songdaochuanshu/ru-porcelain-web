@@ -1,10 +1,6 @@
 {
   "name": "ru-porcelain-web",
-  "main": "./dist/index.js",
   "compatibility_date": "2026-05-09",
-  "compatibility_flags": [
-    "nodejs_compat"
-  ],
   "assets": {
     "directory": "dist/public",
     "not_found_handling": "single-page-application"
