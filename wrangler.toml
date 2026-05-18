@@ -1,15 +1,7 @@
 name = "ru-porcelain-web"
-type = "javascript"
 compatibility_date = "2026-05-09"
+pages_build_output_dir = "dist/public"
 
 [build]
 command = "pnpm build"
 cwd = "./"
-
-[env.production]
-routes = [
-  { pattern = "ru-porcelain-web.pages.dev", zone_name = "pages.dev" }
-]
-
-[pages_build_output_dir]
-dir = "dist/public"
