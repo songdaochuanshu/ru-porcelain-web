@@ -12,7 +12,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden pt-16"
       style={{
         backgroundImage: `url(${heroImageUrl})`,
         backgroundSize: 'cover',
@@ -32,7 +32,7 @@ export default function Hero() {
 
         {/* 副标题 */}
         <p className="text-xl md:text-2xl text-[#6B8FA3] mb-8 font-light tracking-wide">
-          汝瓷官网 React + Vite 项目构建方案
+          汝瓷数字博物馆
         </p>
 
         {/* 引言 */}
@@ -44,10 +44,10 @@ export default function Hero() {
         {/* CTA 按钮 */}
         <div className="flex flex-col sm:flex-row gap-6 justify-center">
           <button className="celadon-button px-8 py-3 text-lg font-medium hover:shadow-lg transition-all duration-300 transform hover:scale-105">
-            探索收藏
+            开始探索
           </button>
           <button className="px-8 py-3 text-lg font-medium border-2 border-[#87B0C1] text-[#87B0C1] rounded-md hover:bg-[#87B0C1]/10 transition-all duration-300">
-            了解工艺
+            了解汝瓷
           </button>
         </div>
       </div>

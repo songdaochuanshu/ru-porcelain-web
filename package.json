@@ -1,5 +1,5 @@
 {
-  "name": "ru-porcelain-showcase",
+  "name": "ru-porcelain-web-v2",
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
@@ -9,8 +9,7 @@
     "start": "NODE_ENV=production node dist/index.js",
     "preview": "vite preview --host",
     "check": "tsc --noEmit",
-    "format": "prettier --write .",
-    "deploy": "pnpm run build && wrangler pages deploy dist/public --project-name=ru-porcelain-web"
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
