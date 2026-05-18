@@ -33,9 +33,12 @@ export default function Navigation() {
           >
             收藏展示
           </button>
-          <a href="#" className="text-[#6B8FA3] hover:text-[#87B0C1] transition font-medium">
+          <button 
+            onClick={() => setLocation('/craftsmanship')}
+            className="text-[#6B8FA3] hover:text-[#87B0C1] transition font-medium"
+          >
             工艺介绍
-          </a>
+          </button>
           <a href="#" className="text-[#6B8FA3] hover:text-[#87B0C1] transition font-medium">
             馆藏信息
           </a>

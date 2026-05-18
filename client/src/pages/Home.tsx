@@ -150,7 +150,7 @@ export default function Home() {
                 <h4 className="font-bold mb-4">了解</h4>
                 <ul className="space-y-2 text-[#A8C5D1]">
                   <li><a href="#" className="hover:text-white transition">汝瓷知识</a></li>
-                  <li><a href="#" className="hover:text-white transition">工艺介绍</a></li>
+                  <li><button onClick={() => setLocation('/craftsmanship')} className="hover:text-white transition">工艺介绍</button></li>
                   <li><a href="#" className="hover:text-white transition">馆藏信息</a></li>
                 </ul>
               </div>
